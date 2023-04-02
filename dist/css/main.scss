@@ -161,6 +161,7 @@ input, button, textarea, select {
   padding: 8px 15px;
   margin: 0 10px;
   font-weight: 300;
+  color: #000;
   cursor: pointer;
   &:hover {
     animation: button_anim 0.15s linear forwards;
@@ -194,7 +195,7 @@ input, button, textarea, select {
     right: 0;
     margin: auto;
     bottom: 0;
-    width: 100px;
+    width: 85px;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -215,7 +216,7 @@ input, button, textarea, select {
 .vocabulary__content {
   font-size: 14px;
   p {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   p:last-child {
     margin-bottom: 30px;

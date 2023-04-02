@@ -156,6 +156,7 @@ input, button, textarea, select {
   padding: 8px 15px;
   margin: 0 10px;
   font-weight: 300;
+  color: #000;
   cursor: pointer;
 }
 .button:hover {
@@ -190,7 +191,7 @@ input, button, textarea, select {
   right: 0;
   margin: auto;
   bottom: 0;
-  width: 100px;
+  width: 85px;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -211,7 +212,7 @@ input, button, textarea, select {
   font-size: 14px;
 }
 .vocabulary__content p {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .vocabulary__content p:last-child {
   margin-bottom: 30px;

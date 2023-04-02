@@ -42,6 +42,7 @@ function readTextFile(file, callback) {
 };
 
 
+
 readTextFile("js/json/first.json", function(a){
     
     //return data from json file
@@ -53,7 +54,7 @@ readTextFile("js/json/first.json", function(a){
     let listContainer = document.querySelector(".j-vocabulary__content");
     list.forEach(([key, value]) => {
         let oneLine = document.createElement("p");
-        oneLine.textContent = `${value}    -->    ${key}`;
+        oneLine.textContent = `${value}` + ` ----> ` + `${key}`;
         listContainer.appendChild(oneLine);
     })
 
@@ -77,6 +78,50 @@ readTextFile("js/json/first.json", function(a){
         this.classList.add("hide-class");
     });
     
-
+    
+    //function of returning random number
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+    
+    let dataCopy = data,
+        translateButton = document.querySelector(".j-translate"),
+        nextButton = document.querySelector(".j-next"),
+        beginButton = document.querySelector(".j-begin"),
+        trainingContainer = document.querySelector(".j-training"),
+        trainingField = document.querySelector(".j-key-value");
+        
+    let randomNumber = getRandomInt(Object.keys(dataCopy).length);
+        
+    trainingField.textContent = Object.keys(dataCopy)[randomNumber];
+    
+    translateButton.addEventListener("click", function(){
+        if (trainingField.textContent == Object.values(dataCopy)[randomNumber]) {
+            trainingField.textContent = Object.keys(dataCopy)[randomNumber];
+        } else {
+            trainingField.textContent = Object.values(dataCopy)[randomNumber];
+        }
+    });
+    
+    nextButton.addEventListener("click", function(){
+        if(Object.keys(dataCopy).length > 1) {
+            Reflect.deleteProperty(dataCopy, Object.keys(dataCopy)[randomNumber]);
+            randomNumber = getRandomInt(Object.keys(dataCopy).length);
+            console.log(randomNumber);
+            trainingField.textContent = Object.keys(dataCopy)[randomNumber];
+        } else {
+            trainingField.textContent = "Gemacht!"
+            translateButton.remove();
+            this.remove();
+        }
+    });
+    
+    beginButton.addEventListener("click", function(){
+        trainingContainer.classList.remove("hide-class");
+        this.remove();
+    });
+    
 });
+
+
 
