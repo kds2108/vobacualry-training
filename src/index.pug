@@ -1,0 +1,63 @@
+
+doctype html
+html(lang="en")
+head
+	meta(charset="utf-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	meta(http-equiv="X-UA-Compatible" content="ie=edge")
+	title(Bakery:homepage)
+	link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Alegreya&family=Open+Sans:wght@300;400;600&display=swap")
+	link(rel="stylesheet" href="css/main.css")
+	link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+
+body
+	header.header
+		.header__wrapper
+			.header__title German-Russian vocabulary training
+			ul.interface-language__list
+				li.interface-language__item
+					a(href="#")#deLink.interface-language__link
+						img(src="img/de.png", alt="")
+				li.interface-language__item
+					a(href="#")#enLink.interface-language__link
+						img(src="img/en.png", alt="")
+				li.interface-language__item
+					a(href="#")#esLink.interface-language__link
+						img(src="img/es.png", alt="")
+	.container
+		.wrapper
+			.vocabulary
+				.vocabulary__title.j-vocabulary-title
+					span.span.span__de.j-span-de Alle Ausdrücke
+					span.span.span__en.j-span-en All phrases
+					span.span.span__es.j-span-es Todas las frases
+				.vocabulary__content.hide-class.j-vocabulary__content
+				.button.vocabulary__show.j-vocabulary__show
+					span.span.span__de.j-span-de anzeigen
+					span.span.span__en.j-span-en show
+					span.span.span__es.j-span-es enseñar
+				.button.vocabulary__hide.hide-class.j-vocabulary__hide
+					span.span.span__de.j-span-de verbergen
+					span.span.span__en.j-span-en hide
+					span.span.span__es.j-span-es ocultar
+			
+			.begin__wrapper
+				.button.begin.j-begin
+					span.span.span__de.j-span-de anfangen!
+					span.span.span__en.j-span-en start!
+					span.span.span__es.j-span-es empezar!
+			.training
+				.key-value.j-key-value
+				.button.translate.j-translate
+					span.span.span__de.j-span-de Übersetzung
+					span.span.span__en.j-span-en Translation
+					span.span.span__es.j-span-es Traducción
+				.button.next.j-next
+					span.span.span__de.j-span-de nächster
+					span.span.span__en.j-span-en next
+					span.span.span__en.j-span-es siguente
+	
+	
+	
+	//- script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js")
+	script(type="text/javascript" src="js/main.js")

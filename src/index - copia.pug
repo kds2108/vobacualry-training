@@ -1,0 +1,44 @@
+
+doctype html
+html(lang="en")
+head
+	meta(charset="utf-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	meta(http-equiv="X-UA-Compatible" content="ie=edge")
+	title(Bakery:homepage)
+	link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Alegreya&family=Open+Sans:wght@300;400;600&display=swap")
+	link(rel="stylesheet" href="css/main.css")
+	link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+
+body
+	header.header
+		.header__wrapper
+			.header__title German-Russian vocabulary training
+			ul.interface-language__list
+				li.interface-language__item
+					a(href="").interface-language__link
+						img(src="img/de.png", alt="")
+				li.interface-language__item
+					a(href="").interface-language__link
+						img(src="img/en.png", alt="")
+				li.interface-language__item
+					a(href="").interface-language__link
+						img(src="img/es.png", alt="")
+	.container
+		.wrapper
+			.vocabulary
+				.vocabulary__title
+					span Alle Ausdrücke
+				.button.vocabulary__show.j-vocabulary__show
+					span anzeigen
+				.button.vocabulary__hide.j-vocabulary__hide
+					span verbergen
+				.vocabulary__list.j-vocabulary__list
+			.training
+				.key-value.j-key-value
+				.button.translate.j-translate
+					span Übersetzung
+				.button.next.j-next
+					span nächster
+
+	script(type="text/javascript" src="js/main.js")

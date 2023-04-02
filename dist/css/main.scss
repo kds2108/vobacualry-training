@@ -1,0 +1,223 @@
+@font-face {
+    font-family: "ProximaNova Regular";
+    src: url("../fonts/proximanova-regular.woff2") format("woff2");
+}
+
+
+$ProximaNovaReg: "ProximaNova Regular";
+$color2: #a47d5e;
+
+
+%clearfix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+// @keyframes logo_anim {
+//     from {color: #fff;}
+//     to   {color: #000;}
+// }
+
+// .some-block {
+//     @extend %clearfix;
+//     animation: img_anim 0.5s linear forwards;
+// }
+
+
+/* canceling default styles*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,ol {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body, h1, h2, h3, h4, p, u, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* --- */
+
+.header {
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 18px;
+  position: relative;
+}
+
+.header__wrapper {
+  width: 80%;
+  max-width: 1200px;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.header__title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.interface-language__list {
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.interface-language__item {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.interface-language__link {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.container {
+    padding: 50px 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  flex-direction: column;
+  max-width: 1200px;
+    padding: 10px 30px 50px;
+    width: 80%;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.vocabulary {
+  margin-bottom: 50px;
+  position: relative;
+  padding-bottom: 40px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+}
+
+.vocabulary__title {
+  margin-bottom: 20px;
+    font-weight: 600;
+}
+
+@keyframes button_anim {
+    from {background-color: rgba(0, 0, 0, 0.15);}
+    to   {background-color: rgba(0, 0, 0, 0.1);}
+}
+
+.button {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-size: 18px;
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin: 0 10px;
+  font-weight: 300;
+  cursor: pointer;
+  &:hover {
+    animation: button_anim 0.15s linear forwards;
+  }
+}
+
+.button.vocabulary__show,
+.translate {
+  margin-left: 0;
+}
+
+.training {
+  text-align: center;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  
+}
+
+.key-value {
+  height: 60px;
+  font-size: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    width: 100px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.show-class {
+  display: inline-block;
+}
+
+.show-class2 {
+  display: block;
+}
+
+.hide-class {
+  display: none;
+}
+
+.vocabulary__content {
+  font-size: 14px;
+  p {
+    margin-bottom: 5px;
+  }
+  p:last-child {
+    margin-bottom: 30px;
+  }
+}
