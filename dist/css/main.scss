@@ -147,6 +147,7 @@ input, button, textarea, select {
   text-align: center;
   flex-direction: column;
   max-width: 1200px;
+  position: relative;
     padding: 10px 30px 50px;
     width: 80%;
     border-left: 1px solid rgba(0, 0, 0, 0.2);
@@ -250,4 +251,34 @@ input, button, textarea, select {
   p:last-child {
     margin-bottom: 30px;
   }
+}
+
+.number1:after,
+.number2:after,
+.number3:after,
+.number4:after {
+  position: absolute;
+  left: 15px;
+  top: -15px;
+  font-size: 100px;
+  font-weight: 600;
+  line-height: 100px;
+  color: rgba(142, 246, 228, 0.15);
+}
+
+
+.number1:after {
+  content: "1";
+}
+
+.number2:after  {
+  content: "2";
+}
+
+.number3:after  {
+  content: "3";
+}
+
+.number4:after  {
+  content: "4";
 }

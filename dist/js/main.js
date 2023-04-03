@@ -134,4 +134,6 @@ if (title.textContent == 1) {
     jsonFunc("js/json/second.json");
 } else if (title.textContent == 3) {
     jsonFunc("js/json/third.json");
-}
+} else if (title.textContent == 4) {
+    jsonFunc("js/json/fourth.json");
+};
