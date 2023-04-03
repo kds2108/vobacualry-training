@@ -42,7 +42,7 @@ input, button, textarea, select {
 
 /* --- */
 .header {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(28, 222, 198, 0.3);
   text-align: center;
   padding: 18px;
   position: relative;
@@ -55,6 +55,15 @@ input, button, textarea, select {
   left: 0;
   right: 0;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__title {
@@ -63,9 +72,32 @@ input, button, textarea, select {
 }
 
 .interface-language__list {
+  height: 20px;
+}
+
+.pages__item {
+  display: inline-block;
+  margin: 0 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pages__link {
+  color: #000;
+  position: relative;
+}
+.pages__link:hover {
+  opacity: 0.5;
+}
+
+.pages__link.active:after {
+  content: "";
   position: absolute;
-  right: 0;
-  top: 5px;
+  left: 0;
+  width: 100%;
+  bottom: -1px;
+  height: 1.5px;
+  background-color: #000;
 }
 
 .interface-language__item {
@@ -104,8 +136,8 @@ input, button, textarea, select {
   max-width: 1200px;
   padding: 10px 30px 50px;
   width: 80%;
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
-  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .vocabulary {
@@ -120,9 +152,9 @@ input, button, textarea, select {
   right: 0;
   margin: auto;
   bottom: 0;
-  width: 100%;
+  width: 55%;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(28, 222, 198, 0.2);
 }
 
 .vocabulary__title {
@@ -132,24 +164,24 @@ input, button, textarea, select {
 
 @-webkit-keyframes button_anim {
   from {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(28, 222, 198, 0.3);
   }
   to {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(28, 222, 198, 0.25);
   }
 }
 
 @keyframes button_anim {
   from {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(28, 222, 198, 0.3);
   }
   to {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(28, 222, 198, 0.25);
   }
 }
 .button {
   display: inline-block;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(28, 222, 198, 0.4);
   text-align: center;
   font-size: 18px;
   border-radius: 3px;
@@ -162,11 +194,6 @@ input, button, textarea, select {
 .button:hover {
   -webkit-animation: button_anim 0.15s linear forwards;
           animation: button_anim 0.15s linear forwards;
-}
-
-.button.vocabulary__show,
-.translate {
-  margin-left: 0;
 }
 
 .training {
@@ -193,7 +220,7 @@ input, button, textarea, select {
   bottom: 0;
   width: 85px;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(28, 222, 198, 0.2);
 }
 
 .show-class {

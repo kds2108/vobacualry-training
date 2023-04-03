@@ -41,9 +41,8 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 };
 
-
-
-readTextFile("js/json/first.json", function(a){
+let jsonFunc = function(filePath) {
+    readTextFile(filePath, function(a){
     
     //return data from json file
     let data = JSON.parse(a);
@@ -62,7 +61,6 @@ readTextFile("js/json/first.json", function(a){
     //show-hide block with phrases
     let showButton = document.querySelector(".j-vocabulary__show"),
         hideButton = document.querySelector(".j-vocabulary__hide");
-        console.log(hideButton);
     
     showButton.addEventListener("click", function(){
         listContainer.classList.remove("hide-class");
@@ -95,7 +93,8 @@ readTextFile("js/json/first.json", function(a){
         
     trainingField.textContent = Object.keys(dataCopy)[randomNumber];
     
-    translateButton.addEventListener("click", function(){
+    translateButton.addEventListener("click", function(event){
+        event.preventDefault();
         if (trainingField.textContent == Object.values(dataCopy)[randomNumber]) {
             trainingField.textContent = Object.keys(dataCopy)[randomNumber];
         } else {
@@ -103,11 +102,11 @@ readTextFile("js/json/first.json", function(a){
         }
     });
     
-    nextButton.addEventListener("click", function(){
+    nextButton.addEventListener("click", function(event){
+        event.preventDefault();
         if(Object.keys(dataCopy).length > 1) {
             Reflect.deleteProperty(dataCopy, Object.keys(dataCopy)[randomNumber]);
             randomNumber = getRandomInt(Object.keys(dataCopy).length);
-            console.log(randomNumber);
             trainingField.textContent = Object.keys(dataCopy)[randomNumber];
         } else {
             trainingField.textContent = "Gemacht!"
@@ -122,6 +121,17 @@ readTextFile("js/json/first.json", function(a){
     });
     
 });
+}
 
+let title = document.querySelector("title");
+let activePage = document.getElementsByClassName("j-pages__link");
 
+activePage[title.textContent - 1].classList.add("active");
 
+if (title.textContent == 1) {
+    jsonFunc("js/json/first.json");
+} else if (title.textContent == 2) {
+    jsonFunc("js/json/second.json");
+} else if (title.textContent == 3) {
+    jsonFunc("js/json/third.json");
+}
