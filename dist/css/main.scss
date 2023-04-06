@@ -89,6 +89,9 @@ input, button, textarea, select {
 .header__title {
   font-weight: 600;
   font-size: 20px;
+  span:last-child {
+    display: none;
+  }
 }
 
 .interface-language__list {
@@ -285,5 +288,14 @@ input, button, textarea, select {
 }
 
 .number5:after  {
-  content: "5*";
+  content: "5";
 }
+
+.mobile-menu {
+  display: none;
+}
+
+
+
+
+@import "./responsive.scss";

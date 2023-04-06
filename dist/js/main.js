@@ -129,13 +129,31 @@ let activePage = document.getElementsByClassName("j-pages__link");
 activePage[title.textContent - 1].classList.add("active");
 
 if (title.textContent == 1) {
-    jsonFunc("js/json/first.json");
+    jsonFunc("js/json/1.json");
 } else if (title.textContent == 2) {
-    jsonFunc("js/json/second.json");
+    jsonFunc("js/json/2.json");
 } else if (title.textContent == 3) {
-    jsonFunc("js/json/third.json");
+    jsonFunc("js/json/3.json");
 } else if (title.textContent == 4) {
-    jsonFunc("js/json/fourth.json");
+    jsonFunc("js/json/4.json");
 } else if (title.textContent == 5) {
-    jsonFunc("js/json/fifth.json");
+    jsonFunc("js/json/5.json");
+} else if (title.textContent == 6) {
+    jsonFunc("js/json/verbs.json");
+} else if (title.textContent == 7) {
+    jsonFunc("js/json/substantiv.json");
 };
+
+
+
+let mobileMenu = document.querySelector(".j-header-wrapper");
+
+document.querySelector(".j-menu-open").addEventListener("click", function(event){
+    event.preventDefault();
+    mobileMenu.classList.add("menu-show");
+});
+
+document.querySelector(".j-menu-close").addEventListener("click", function(event){
+    event.preventDefault();
+    mobileMenu.classList.remove("menu-show");
+});

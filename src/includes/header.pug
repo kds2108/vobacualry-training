@@ -1,7 +1,14 @@
 
 header.header
-	.header__wrapper
-		.header__title German-Russian vocabulary training
+	.header__wrapper.j-header-wrapper
+		.mobile-menu.j-mobile-menu
+			a(href="#").menu-open.j-menu-open
+				img(src="img/menu.png", alt="")
+			a(href="#").menu-close.j-menu-close
+				img(src="img/close.png", alt="") 
+		.header__title
+			span German-Russian vocabulary training
+			span De-Ru
 		ul.pages__list
 			li.pages__item
 				a(href="index.html").pages__link.j-pages__link Part 1
@@ -12,7 +19,11 @@ header.header
 			li.pages__item
 				a(href="fourth.html").pages__link.j-pages__link Part 4
 			li.pages__item
-				a(href="fifth.html").pages__link.j-pages__link Part 5*
+				a(href="fifth.html").pages__link.j-pages__link Part 5
+			li.pages__item
+				a(href="sixth.html").pages__link.j-pages__link Verbs
+			li.pages__item
+				a(href="substantiv.html").pages__link.j-pages__link Substantiv
 		ul.interface-language__list
 			li.interface-language__item
 				a(href="#")#deLink.interface-language__link
